@@ -96,3 +96,57 @@
     background: rgba(255, 255, 255, 0.33);
     z-index: 2;
 }
+
+.transition-transform button
+{
+    font-family: Arial, Helvetica, sans-serif;
+    color:gray;
+    width: 200px;
+    height: 10;
+    background: lavenderblush;
+    padding: 8px 16px;
+    border: 3px solid black;
+    margin: 32px;
+    cursor: pointer; /* cursor change for pointer with hand */
+    transition: 
+        1s linear border, 
+        0.3s ease-in padding, 
+        0.5s ease-in-out background-color,
+        2s ease color,
+        4s ease font-size;
+}
+.transition-transform button:hover,
+.transition-transform button:focus,
+.transition-transform button:active {
+    color: lavenderblush;
+    background: gray;
+    border: 6px dotted indigo;
+    padding: 12px 20px;
+}
+/* Transform / hover example */
+.transition-transform div{
+    transition: 1s ease transform;
+    display: inline-block;
+    padding: 8px 16px;
+    background-color: green;
+    cursor: pointer;
+
+
+}
+.transition-transform div + div
+{
+    background-color: blue;
+    pointer-events: none;
+}
+.transition-transform div:hover + div
+{
+    transform :
+    translate( 100px, -50px)
+    rotate( 35deg )
+    scale( 2 );
+    pointer-events: none;
+}
+div
+{
+    text-align: center;
+}
