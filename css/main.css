@@ -133,17 +133,18 @@
 
 
 }
-.transition-transform div + div
+.transition-transform div + div /* find a div beside a div ... this is a directly followed by sibling selector */
 {
     background-color: blue;
-    pointer-events: none;
+    pointer-events: none; /* disable hover/click/etc for the element */
+    /*will affect your javascript and all mouse actions */
 }
-.transition-transform div:hover + div
+.transition-transform div:hover + div /* now we're combining our pseudo state for hover, and telling the following div how to behave */
 {
     transform :
-    translate( 100px, -50px)
-    rotate( 35deg )
-    scale( 2 );
+    translate( 100px, -50px) /*move based on x and y */
+    rotate( 35deg ) /* rotation in degree */
+    scale( 2 ); /* resize the element 2= 200% */
     pointer-events: none;
 }
 div
